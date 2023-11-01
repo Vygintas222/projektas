@@ -1,0 +1,121 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Er Gen"
+    },
+    {
+      "id": 2,
+      "name": "Misty Rain of Jiangnan"
+    },
+    {
+      "id": 3,
+      "name": "Mars Gravity"
+    }
+  ],
+  "books": [
+    {
+      "authorId": 1,
+      "id": 1,
+      "title": "A Will Eternal",
+      "body": "It tells the tale of Bai Xiaochun, an endearing but exasperating young man who is driven primarily by his fear of death and desire to live forever, but who deeply values friendship and family. The story takes place in the same Universe as Er Gen's other novels, but is a separate story and can be read alone. That said, it does have connections to the other novels, especially I Shall Seal the Heavens."
+    },
+  
+    {
+      "authorId": 2,
+      "id": 2,
+      "title": "City of Sin",
+      "body": "Every drop of this family bloodline is stained with sin. They are the embodiment of contradiction; calm yet maniacal, with great memories yet often forgetful. They pledge themselves to their dreams yet often compromise, are angels that are also devils… It is why I hate them."
+    },
+    {
+      "authorId": 3,
+      "id": 3,
+      "title": "Against the Gods",
+      "body": "Hunted for possessing a heaven-defying object, Yun Che is a young man in both that life and the next. Throwing himself off a cliff to spite his pursuers, Yun Che is reincarnated as Xiao Che, a recently poisoned teen in another realm. Just as hated in this life as the previous one, Che must overcome his own hostile clan, his own inability to cultivate, and his own frosty fiancée."
+    }
+  ],
+  "volumes": [
+    {
+      "bookId": 1,
+      "id":1,
+      "title": "Glossary and Art Gallery"
+    },
+    {
+      "bookId": 1,
+      "id":2,
+      "title": "The Legend of Nightcrypt!"
+    },
+    {
+      "bookId": 1,
+      "id":3,
+      "title": "Rise Of The River-Defying Sect!"
+    },
+    {
+      "bookId": 1,
+      "id":4,
+      "title": "A Different Kind of Hostage!"
+    },
+    {
+      "bookId": 1,
+      "id":5,
+      "title": "The Peak Of Life!"
+    },
+    {
+      "bookId": 1,
+      "id":6,
+      "title": "The Strongest Deva"
+    },
+    {
+      "bookId": 1,
+      "id":7,
+      "title": "The Eternal Immortal Domains"
+    },
+    {
+      "bookId": 2,
+      "id":8,
+      "title": "City of Sin"
+    },
+    {
+      "bookId": 2,
+      "id":9,
+      "title": "My Conquest Is The Sea of Stars"
+    },
+    {
+      "bookId": 2,
+      "id":10,
+      "title": "Walking With Ghosts At Day"
+    },
+    {
+      "bookId": 3,
+      "id":11,
+      "title": "Red Colored Calamity"
+    },
+    {
+      "bookId": 3,
+      "id":12,
+      "title": "Blue Wind Conspiracy"
+    }
+  ],
+  "photos": [
+    {
+      "bookId": 1,
+      "id": 1,
+      "url": "https://static.wikia.nocookie.net/a-will-eternal/images/1/12/Raws_Cover_1.jpg"
+    },
+    {
+      "bookId": 2,
+      "id": 2,
+      "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg"
+    },
+    {
+      "bookId": 3,
+      "id": 3,
+      "url": "https://static.wikia.nocookie.net/ni-tian-xie-shen-against-the-gods/images/e/ee/ATG2.jpg"
+    },
+    {
+      "bookId": 4,
+      "id": 2,
+      "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg"
+    }
+  ]
+}
