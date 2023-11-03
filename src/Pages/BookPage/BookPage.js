@@ -30,7 +30,7 @@ const BookPage = () => {
     },[id])
   
     const volumesElement = element.map(volume =>(
-        <Link to={`/volumes/${volume.id}`} key={volume.id}>{volume.title}</Link>
+        <li key={volume.id}>{volume.title}</li>
     ))
 
     const imageElement = photo.map(image =>(

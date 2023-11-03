@@ -8,11 +8,6 @@ const Headerr = () => {
 
       <nav className='main-navigation'>
         <ul className='nav-list'>
-           
-          <li>  
-            <NavLink className='nav-item' to='/home'>Home</NavLink>
-          </li>
-
           <li>  
             <NavLink className='nav-item' to='/authors'>Authors</NavLink>
           </li>
@@ -22,6 +17,9 @@ const Headerr = () => {
           </li>
           <li>  
             <NavLink className='nav-item' to='/genres'>Genres</NavLink>
+          </li>
+          <li>  
+            <NavLink className='nav-item' to='/volumes'>Volumes</NavLink>
           </li>
         </ul>
 

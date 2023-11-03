@@ -21,7 +21,7 @@
     {
       "authorId": 1,
       "id": 1,
-      "title": "A Will Eternal",
+      "title": "A Will Eternal 2",
       "body": "It tells the tale of Bai Xiaochun, an endearing but exasperating young man who is driven primarily by his fear of death and desire to live forever, but who deeply values friendship and family. The story takes place in the same Universe as Er Gen's other novels, but is a separate story and can be read alone. That said, it does have connections to the other novels, especially I Shall Seal the Heavens."
     },
     {
@@ -85,19 +85,31 @@
       "title": "My Conquest Is The Sea of Stars"
     },
     {
-      "bookId": 2,
-      "id": 10,
-      "title": "Walking With Ghosts At Day"
+      "title": "Walking With Ghosts At Day 2",
+      "id": 10
+    },
+    {
+      "title": "Red Colored Calamity2",
+      "id": 11
+    },
+    {
+      "title": "Blue Wind Conspiracy",
+      "id": 12
+    },
+    {
+      "bookId": 4,
+      "title": "Journey to the stars",
+      "id": 14
+    },
+    {
+      "bookId": 4,
+      "title": "Flipping the Sky",
+      "id": 15
     },
     {
       "bookId": 3,
-      "id": 11,
-      "title": "Red Colored Calamity"
-    },
-    {
-      "bookId": 3,
-      "id": 12,
-      "title": "Blue Wind Conspiracy"
+      "title": "asdasdasd",
+      "id": 16
     }
   ],
   "photos": [

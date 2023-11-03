@@ -64,7 +64,7 @@ const AuthorPage = () => {
                   <img key={Photo.id} src={Photo.url} alt=''></img>
                   ))}
                  <p>{book.body}</p>
-   </Link> 
+         </Link> 
                    {book.genres.map(genre => (
                     <div key={genre.id}>
                           <button onClick={() => removeGenreHandler(genre.id)}>Remove Genre</button>

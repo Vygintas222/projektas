@@ -15,7 +15,7 @@ const [element ,setElement] = useState([])
       
 
         async function fetchVolumes(){
-            const res =await fetch(`${API_URL}/volumes`)
+            const res =await fetch(`${API_URL}/books?_embed=volumes`)
             const volumeData = await res.json()
            setElement(volumeData)
             
