@@ -20,6 +20,9 @@ const Headerr = () => {
           <li>  
             <NavLink className='nav-item' to='/books'>Books</NavLink>
           </li>
+          <li>  
+            <NavLink className='nav-item' to='/genres'>Genres</NavLink>
+          </li>
         </ul>
 
 

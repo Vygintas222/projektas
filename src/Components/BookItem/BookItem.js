@@ -1,26 +1,32 @@
 import React from 'react'
 import './BookItem.css'
 import { Link } from 'react-router-dom'
-const BookItem = ({data,deleteButton}) => {
+const BookItem = ({data}) => {
 
 
-    const {title,body,photos,id} = data
-    const randomIndex = Math.floor(Math.random() * photos.length)
-    const randomImage = photos[randomIndex]
+    const {title,body,photos,id,genres} = data
+    
+console.log(data.genres)
 
-    const Url = randomImage.url
    
+    const photoElement = photos.map(photo =>(
+      <img key={photo.id} className='image' src={photo.url} alt=''></img>
+    ))
   return (
-    <div>
+    <div className='book-item-wrapper'>
         <Link 
         to={`/books/${id}`}
         className='book-link'
         >
         <h2>{title}</h2>
         <div className='book-wrapper'>
-        <img className='image' src={Url} alt=''></img>
+        {photoElement}
         <p>{body}</p>
+        {genres.map(genre =>(
+          <p key={genre.id}>{genre.name}</p>
+        ))}
         </div>
+        
         </Link>
     </div>
   )

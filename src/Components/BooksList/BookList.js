@@ -1,6 +1,6 @@
 import React from 'react'
 import BookItem from '../BookItem/BookItem'
-
+import './BookList.css'
 
 const BookList = ({books}) => {
 
@@ -12,18 +12,23 @@ const BookList = ({books}) => {
   // }
 
 
+
+  
+   console.log(books.genres)
   let booksElement = <p>no books...</p>
 
   if(books.length >0){
     booksElement = (
-      <div>
-        {books.map((book)=><BookItem key={book.id} data={book} />)}
+      <div className='books-wrapper'>
+        {books.map((book)=><BookItem key={book.id} data={book}  />)}
+        
       </div>
     )
    
   }
   return (
-    <div>
+    <div className='books-list-wrapper'>
+    
       <h2>Books:</h2>
       {booksElement}
     </div>
