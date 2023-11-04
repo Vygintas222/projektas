@@ -9,19 +9,23 @@ const GenresPage = () => {
     const [books, setBooks] = useState([])
     const [genres, setGenres] = useState([])
     useEffect(() => {
-       
-        fetch(`${API_URL}/books?_embed=photos`)
-          .then((response) => response.json())
-          .then((data) => setBooks(data))
-   
-        
-        fetch(`${API_URL}/genres`)
-          .then((response) => response.json())
-          .then((data) => setGenres(data))
+       const fetchBooks =  async() =>{
+
+        const res = await fetch(`${API_URL}/books?_embed=photos`)
+        const data = await res.json()
+         setBooks(data)
+        }
+        fetchBooks()
+        const fetchGenres = async()=>{
+          const res = await fetch(`${API_URL}/genres`)
+          const data = await res.json()
+          setGenres(data)
+        }
+        fetchGenres()
       }, [])
 
   return (
-    <div className="App">
+    <div>
     <h1>Genres</h1>
     <BookFilter books={books} genres={genres} />
   </div>

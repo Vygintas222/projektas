@@ -2,12 +2,14 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_URL } from '../../config'
 import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
-const AddGenreForm = () => {
+const AddGenreForm = ({genre}) => {
 
     const [books,setBooks]= useState([])
     const [bookID ,setBookId]= useState('')
-    const [name ,setGenres]= useState([])
+    const [name ,setName]= useState('')
+    const [genres,setGenres] = useState(genre.genres||[])
     const { id } = useParams()
 
 
@@ -24,10 +26,11 @@ const AddGenreForm = () => {
 
 
 
+   
+      
 
-
-       const textareHandler = (event) =>{
-            setGenres(event.target.value)
+       const nameHandler = (event) =>{
+            setName(event.target.value)
            
        }
 
@@ -37,10 +40,10 @@ const AddGenreForm = () => {
            
        }
 
-    const addCoverHandler = async event =>{
+    const addGenreHandler = async event =>{
         event.preventDefault()
 
-  
+      
         const newGenres={
             bookId:Number(bookID),
             name
@@ -49,7 +52,14 @@ const AddGenreForm = () => {
       
         const res = await axios.post(`${API_URL}/genres`, newGenres)
       
+        if (res.statusText === 'Created') {
+            setGenres((prevGenres) => [...prevGenres, genres])
+            toast.success(`Genre ${name} was added`)
+          } else {
+            console.error('Something went wrong.')
+          }
       
+          setName('')
       }
 
       const BookOption = books.map(option =>(
@@ -60,7 +70,7 @@ const AddGenreForm = () => {
   return (
     <fieldset>
         <legend>Add genre</legend>
-        <form onSubmit={addCoverHandler}>
+        <form onSubmit={addGenreHandler}>
             <div className='form-control'>
                 <label>Book Title</label>
                 <select onChange={getBookId}>
@@ -70,12 +80,14 @@ const AddGenreForm = () => {
             </div>
             <div className='form-control'>
                 <label htmlFor='genre'>Genres</label>
-                <textarea 
+                <input 
+                type='text'
                 name='genre' 
                 id='genre'
-                onChange={textareHandler}
+                value={name}
+                onChange={nameHandler}
                 >
-                </textarea>
+                </input>
 
             </div>
             <button type='submit'>Add</button>

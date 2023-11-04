@@ -14,6 +14,9 @@ import VolumesPage from './Pages/VolumesPage/VolumesPage'
 import EditBook from './Pages/EditBook/EditBook'
 import GenresPage from './Pages/GenresPage/GenresPage'
 import EditAuthorPage from './Pages/EditAuthorPage/EditAuthorPage'
+import CreateBookPage from './Pages/CreateBookPage/CreateBookPage'
+import AddNewgenrePage from './Pages/AddNewgenrePage/AddNewgenrePage'
+import AddVolumePage from './Pages/AddVolumePage/AddVolumePage'
 
 function App() {
   return (
@@ -23,7 +26,6 @@ function App() {
     <Headerr></Headerr>
 
       <Routes>
-        <Route path='/home' element={<HomePage/>}/>
         <Route path='/authors' element={<AuthorsPage/>}/>
         <Route path='authors/:id' element={<AuthorPage/>}/>
         <Route path='/books' element={<BooksPage/>}/>
@@ -32,6 +34,9 @@ function App() {
         <Route path='/volumes' element={<VolumesPage/>}/>
         <Route path='/edit-author/:id' element={<EditAuthorPage/>}/>
         <Route path='/genres' element={<GenresPage/>}/>
+        <Route path='/add-new-book/:id' element={<CreateBookPage/>}/>
+        <Route path='/add-new-genre/:id' element={<AddNewgenrePage/>}/>
+        <Route path='/add-new-volume/:id' element={<AddVolumePage/>}></Route>
     
 
 

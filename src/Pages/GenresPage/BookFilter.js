@@ -16,6 +16,8 @@ const BookFilter = ({ books, genres }) => {
     }
   }, [selectedGenre, books, genres])
 
+  
+console.log(books)
   return (
     <div>
      
@@ -31,8 +33,15 @@ const BookFilter = ({ books, genres }) => {
         {filteredBooks.map((book) => (
           <div key={book.id} className="book">
             <h3>{book.title}</h3>
-            <img src={book.photos[0].url }alt={book.photos[0].name}></img>
+            {book.photos[0] && <img className='image' src={book.photos[0].url} alt={book.photos[0].title}></img>}
             <p>{book.body}</p>
+            <ul>
+            {genres
+                .filter((genre) => genre.bookId === book.id)
+                .map((genre) => (
+                  <li key={genre.id}>{genre.name}</li>
+                ))}
+            </ul>
           </div>
         ))}
       </div>
