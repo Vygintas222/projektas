@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { API_URL } from '../../config'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
-
+import styles from './AuthorBookItem.module.scss'
 const AuthorBookItem = ({data}) => {
   
 const {title,body,photos,id}= data
@@ -18,18 +18,20 @@ const deleteGenreHandler = async(id,name)=>{
     setGenres((prevState) => prevState.filter((genre) => genre.id !== id))
 }
   return (
-    <div>
-        <h2>{title}</h2>
+    <div className={styles.bookItem}>
+      <Link className={styles.link} to={`/books/${id}`} >
+        <h2 className={styles.h2}>{title}</h2>
         {photos && photos.length >0 &&(
           <img className='image' src={photos[0].url} alt={photos[0].url}></img>   
-        )}
+          )}
+          </Link>
       
-        <ul>
+        <ul className={styles.genres}>
             {genres.map(genre =>(
-                <li key={genre.id}>{genre.name}  <button onClick={() => deleteGenreHandler(genre.id,genre.name)}>x</button></li>
+                <li className={styles.genre} key={genre.id}>{genre.name}  <button className={styles.buttonDesign} onClick={() => deleteGenreHandler(genre.id,genre.name)}>x</button></li>
             ))}
         </ul>
-        <Link to={`/add-new-genre/${id}`}> add genre</Link>
+        <Link className={styles.buttonDesign} to={`/add-new-genre/${id}`}> add genre</Link>
         <p>{body}</p>
     </div>
   )

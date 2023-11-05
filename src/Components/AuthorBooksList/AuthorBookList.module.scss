@@ -1,0 +1,10 @@
+.bookWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    background: rgb(239, 244, 247)
+}
+
+.AuthorName{
+    text-align: center;
+}

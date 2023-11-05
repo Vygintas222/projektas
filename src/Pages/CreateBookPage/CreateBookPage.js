@@ -25,7 +25,7 @@ event.preventDefault()
 
 
 const newBook ={
-    authorId:id,
+    authorId:Number(id),
     title,
     body
 }
@@ -66,6 +66,7 @@ const newPhoto ={
         name='body'
         id='body'
         onChange={bodyHandler}
+        maxLength={300}
         ></textarea>
     </div>
     <div className='form-control'>

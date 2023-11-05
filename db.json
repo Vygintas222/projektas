@@ -2,11 +2,11 @@
   "authors": [
     {
       "id": 1,
-      "name": "Er Gen"
+      "name": "Er Gen 2"
     },
     {
       "id": 2,
-      "name": "Misty Rain of Jiangnan  2"
+      "name": "Misty Rain of Jiangnan  "
     },
     {
       "id": 3,
@@ -15,10 +15,6 @@
     {
       "name": "Along With The Wind",
       "id": 4
-    },
-    {
-      "name": "ASdasdasdasd",
-      "id": 5
     }
   ],
   "books": [
@@ -47,40 +43,16 @@
       "id": 4
     },
     {
-      "authorId": 1,
-      "title": "Asdasdasd",
-      "body": "adasdasd",
+      "authorId": 2,
+      "title": "Testas",
+      "body": "Testas",
       "id": 5
     },
     {
-      "authorId": "1",
-      "title": "Testas 2",
-      "body": "tests2",
-      "id": 7
-    },
-    {
-      "authorId": "1",
-      "title": "Asdasdasd22312",
-      "body": "asdsdasdasd",
-      "id": 8
-    },
-    {
-      "authorId": "1",
-      "title": "testas 2",
-      "body": "testas 2",
-      "id": 9
-    },
-    {
-      "authorId": "5",
-      "title": "Asdasdasd",
-      "body": "asdasdasd",
-      "id": 10
-    },
-    {
-      "authorId": "2",
-      "title": "Testas 5",
-      "body": "Testas 5",
-      "id": 11
+      "authorId": 2,
+      "title": "ASDsad",
+      "body": "aASDASDASD",
+      "id": 6
     }
   ],
   "volumes": [
@@ -152,45 +124,18 @@
     },
     {
       "bookId": 5,
-      "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg",
-      "id": 7
-    },
-    {
       "url": "https://cdn.wuxiaworld.com/images/covers/so.jpg",
-      "title": "testing",
-      "id": 8
-    },
-    {
-      "bookId": 8,
-      "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg",
       "title": "testing",
       "id": 9
     },
     {
-      "bookId": 9,
-      "url": "https://cdn.novelupdates.com/images/2020/12/aboveyourhead3.jpg",
-      "title": "testing",
-      "id": 10
-    },
-    {
-      "bookId": 10,
-      "url": "https://cdn.novelupdates.com/images/2020/12/aboveyourhead3.jpg",
-      "title": "testing",
-      "id": 11
-    },
-    {
-      "bookId": 11,
+      "bookId": 6,
       "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg",
-      "title": "testing",
-      "id": 12
+      "title": "asdasdasd",
+      "id": 10
     }
   ],
   "genres": [
-    {
-      "bookId": 2,
-      "id": 3,
-      "name": "Tragedy"
-    },
     {
       "bookId": 4,
       "id": 5,
@@ -204,22 +149,12 @@
     {
       "bookId": 1,
       "name": "Action",
-      "id": 11
-    },
-    {
-      "bookId": 5,
-      "name": "asdasd",
       "id": 14
     },
     {
-      "bookId": 10,
-      "name": "asdasd",
-      "id": 17
-    },
-    {
-      "bookId": 11,
-      "name": "Testas",
-      "id": 18
+      "bookId": 1,
+      "name": "aaaa",
+      "id": 15
     }
   ]
 }

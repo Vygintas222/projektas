@@ -5,8 +5,8 @@ import { API_URL } from '../../config'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-
 import AuthorBooksList from '../../Components/AuthorBooksList/AuthorBooksList'
+import styles from './AuthorPage.module.scss'
 
 const AuthorPage = () => {
     const { id } = useParams()
@@ -58,21 +58,23 @@ const AuthorPage = () => {
       <></>
     ):
     (
-      <div>
+      <div className={styles.PageWrapper}>
 
+      <div className={styles.buttonsWrapper}>
 
-        <button onClick={deleteAuthorHandler}>Delete author</button>
-        <Link to={`/edit-author/${id}`}>Edit Author</Link>
-        <Link to={`/add-new-book/${id}`}>add new book</Link>
+        <button className={styles.buttonDesign} onClick={deleteAuthorHandler}>Delete author</button>
+        <Link className={styles.buttonDesign} to={`/edit-author/${id}`}>Edit Author</Link>
+        <Link className={styles.buttonDesign} to={`/add-new-book/${id}`}>add new book</Link>
+      </div>
 
 
       
 
 
-        <div className='books-wrapper'>
+        
          <AuthorBooksList books={books}/>
 
-        </div>
+        
       </div>
     )}
 
