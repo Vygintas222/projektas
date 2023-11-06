@@ -86,6 +86,7 @@ const AddGenreForm = ({genre}) => {
                 id='genre'
                 value={name}
                 onChange={nameHandler}
+                maxLength={10}
                 >
                 </input>
 

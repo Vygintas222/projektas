@@ -1,6 +1,7 @@
 import React from 'react'
 import VolumeItem from '../VolumeItem/VolumeItem'
-import './VolumesList.css'
+import styles from './VolumesList.module.scss'
+import Container from '../Container/Container'
 const VolumeList = ({volumes}) => {
 
     const VolumeElement = volumes.map(volume =>(<VolumeItem key={volume.id} data={volume} />)
@@ -9,9 +10,13 @@ const VolumeList = ({volumes}) => {
     
 )
   return (
-    <div className='volumes-list'>
+   <Container>
+      <div className={styles.volumeList}>
+
         {VolumeElement}
-    </div>
+      </div>
+   </Container>
+    
   )
 }
 

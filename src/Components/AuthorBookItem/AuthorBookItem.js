@@ -28,7 +28,7 @@ const deleteGenreHandler = async(id,name)=>{
       
         <ul className={styles.genres}>
             {genres.map(genre =>(
-                <li className={styles.genre} key={genre.id}>{genre.name}  <button className={styles.buttonDesign} onClick={() => deleteGenreHandler(genre.id,genre.name)}>x</button></li>
+                <li className={styles.genre} key={genre.id}>{genre.name}  <button className={styles.buttonDesign2} onClick={() => deleteGenreHandler(genre.id,genre.name)}>x</button></li>
             ))}
         </ul>
         <Link className={styles.buttonDesign} to={`/add-new-genre/${id}`}> add genre</Link>

@@ -1,0 +1,19 @@
+$xl:900px;
+$s:400px;
+
+
+
+
+
+.volumeList{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+    @media(max-width:900px){
+        .volumeList{
+            grid-template-columns: 1fr;
+        }
+    }

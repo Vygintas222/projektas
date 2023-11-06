@@ -1,34 +1,38 @@
 import React from 'react'
-import './BookItem.css'
+import styles from'./BookItem.module.scss'
 import { Link } from 'react-router-dom'
 const BookItem = ({data}) => {
 
 
     const {title,body,photos,id,genres} = data
     
-console.log(data.genres)
+
 
    
     const photoElement = photos.map(photo =>(
-      <img key={photo.id} className='image' src={photo.url} alt=''></img>
+      <img key={photo.id} className={styles.IMG} src={photo.url} alt=''></img>
     ))
   return (
-    <div className='book-item-wrapper'>
+   
         <Link 
         to={`/books/${id}`}
-        className='book-link'
+        className={styles.bookWrapper}
         >
-        <h2>{title}</h2>
-        <div className='book-wrapper'>
+        <div className={styles.book}>
+
+        <h2 className={styles.bookTitle}>{title}</h2>
         {photoElement}
         <p>{body}</p>
+        <ul className={styles.genresList}>
         {genres.map(genre =>(
-          <p key={genre.id}>{genre.name}</p>
-        ))}
-        </div>
+          <li key={genre.id}>{genre.name}</li>
+          ))}
+          </ul>
+          </div>
+     
         
         </Link>
-    </div>
+ 
   )
 }
 

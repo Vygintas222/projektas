@@ -3,7 +3,7 @@ import { useState } from "react"
 import { API_URL } from "../../config"
 import { toast } from "react-toastify"
 import { Link } from "react-router-dom"
-
+import styles from "./VolumeItem.module.scss"
 
 const VolumeItem = ({ data }) => {
  
@@ -39,41 +39,48 @@ const VolumeItem = ({ data }) => {
   }
 
   return (
-    <div>
-  
+    <div className={styles.volumeItem}>
+     
+
       <h2>{data.title}</h2>
-      <Link to={`/add-new-volume/${data.id}`} >Add volume</Link>
-      <ul>
+      <Link className={styles.addVolumeButton} to={`/add-new-volume/${data.id}`} >Add volume</Link>
+      <ul className={styles.volumesList}>
         {volumes.map((volume) => (
           
           <li key={volume.id}>
             {editing === volume.id ? (
-              <div>
+              <div className={styles.volumeWrapper}>
                 <input
                   type="text"
                   value={volume.title}
                   onChange={(event) =>
                     setVolumes((prevVolumes) =>
-                      prevVolumes.map((newVolume) => (newVolume.id === volume.id ? { ...newVolume, title: event.target.value } : newVolume))
+                    prevVolumes.map((newVolume) => (newVolume.id === volume.id ? { ...newVolume, title: event.target.value } : newVolume))
                     )
                   }
-                />
-                
-                <button onClick={() => editVolumeHandler(volume)}>Save</button>
-                <button onClick={() => setEditing(null)}>Cancel</button>
+                  />
+                <div className={styles.buttonWrapper}>
+
+                <button  className={styles.button} onClick={() => editVolumeHandler(volume)}>Save</button>
+                <button className={styles.button}onClick={() => setEditing(null)}>Cancel</button>
+                </div>
               </div>
             ) : (
-              <div>
+              <div className={styles.volumeWrapper} >
                 {volume.title}{' '}
                
-                <button onClick={() => setEditing(volume.id)}>Edit</button>
-                <button onClick={() => deleteVolumeHandler(volume.id, volume.title)}>Delete</button>
+              <div className={styles.buttonWrapper}>
+                <button className={styles.button} onClick={() => setEditing(volume.id)}>Edit</button>
+                <button className={styles.button} onClick={() => deleteVolumeHandler(volume.id, volume.title)}>Delete</button>
               </div>
+               </div>
+          
             )}
           </li>
         ))}
       </ul>
-    </div>
+        </div>
+    
   )
 }
 

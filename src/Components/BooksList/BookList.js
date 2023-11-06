@@ -1,6 +1,6 @@
 import React from 'react'
 import BookItem from '../BookItem/BookItem'
-import './BookList.css'
+import styles from './BookList.module.scss'
 
 const BookList = ({books}) => {
 
@@ -19,19 +19,22 @@ const BookList = ({books}) => {
 
   if(books.length >0){
     booksElement = (
-      <div className='books-wrapper'>
+      <>
         {books.map((book)=><BookItem key={book.id} data={book}  />)}
+      </>
         
-      </div>
+     
     )
    
   }
   return (
-    <div className='books-list-wrapper'>
+   
     
-      <h2>Books:</h2>
+  <div className={styles.booksWrapper}>
+
       {booksElement}
-    </div>
+  </div>
+   
   )
 }
 

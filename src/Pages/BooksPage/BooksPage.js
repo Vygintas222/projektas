@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { API_URL } from '../../config'
 import BookList from '../../Components/BooksList/BookList'
 import Container from '../../Components/Container/Container'
-
+import styles from './BooksPage.module.scss'
 const BooksPage = () => {
 
   const [books, setBooks]= useState([])
@@ -19,11 +19,13 @@ const BooksPage = () => {
     fetchBook()
    },[])
 
-console.log(books)
+
 
   return (
     <Container>
-  
+  <div className={styles.pageName}>
+  <h1>Books</h1>
+  </div>
    <BookList books={books}/>
     </Container>
   )

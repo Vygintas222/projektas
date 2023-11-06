@@ -4,7 +4,8 @@ import { API_URL } from '../../config'
 import './bookWrapper.css'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-
+import styles from "./BookPage.module.scss"
+import Container from '../../Components/Container/Container'
 const BookPage = () => {
 
     const {id} = useParams()
@@ -34,12 +35,12 @@ const BookPage = () => {
     ))
 
     const imageElement = photo.map(image =>(
-        <img className='image' key={image.id} src={image.url} alt=''></img>
+        <img className={styles.image} key={image.id} src={image.url} alt=''></img>
         
     ))
 
     const genresElement = genres.map(genre => (
-        <p key={genre.id}>{genre.name}</p>
+        <li key={genre.id}>{genre.name}</li>
     ) ) 
         
    
@@ -55,27 +56,34 @@ const BookPage = () => {
 
   
   return (
-    
-   <div className='book-wrapper'>
-    <Link to={`/edit-book/${book.id}`}>Edit Book</Link>
+    <Container>
+        <div className={styles.gap}>
+   <div className={styles.bookWrapper}>
+    <Link className={styles.buttonDesign} to={`/edit-book/${book.id}`}>Edit Book</Link>
   
-    <button onClick={deleteBookHandler}>Delete book</button>
+    <button className={styles.buttonDesign} onClick={deleteBookHandler}>Delete book</button>
 
     <h2>{book.title}</h2>
     
     {imageElement}
-    <div className='genres'>
+
+  
+    {genres.length >0 &&   <div className='genres'>
     <span>Genres:</span>
+    <ul className={styles.genresUl}>
     {genresElement}
-    </div>
+    </ul>
+    </div> }
     <p>{book.body}</p>
     <h2>Volumes</h2>
-    <ul>
+    <ul className={styles.volumesUl}>
         {volumesElement}
     </ul>
 
    </div>
+        </div>
 
+    </Container>
   )
 }
 

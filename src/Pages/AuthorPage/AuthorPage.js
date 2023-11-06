@@ -53,18 +53,22 @@ const AuthorPage = () => {
 
 
   return (
-   <Container>
+ 
+    <div className={styles.container}>
+
     {authorDeleted?(
       <></>
-    ):
-    (
-      <div className={styles.PageWrapper}>
+      ):
+      (
+        <div className={styles.PageWrapper}>
 
       <div className={styles.buttonsWrapper}>
+        <div className={styles.buttonElements}>
 
         <button className={styles.buttonDesign} onClick={deleteAuthorHandler}>Delete author</button>
         <Link className={styles.buttonDesign} to={`/edit-author/${id}`}>Edit Author</Link>
         <Link className={styles.buttonDesign} to={`/add-new-book/${id}`}>add new book</Link>
+        </div>
       </div>
 
 
@@ -79,7 +83,8 @@ const AuthorPage = () => {
     )}
 
        
-   </Container>
+    </div>
+  
   )
 }
 

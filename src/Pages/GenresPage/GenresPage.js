@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+
 import { API_URL } from '../../config'
 import BookFilter from './BookFilter'
+import Container from '../../Components/Container/Container'
 
 const GenresPage = () => {
  
@@ -25,10 +26,12 @@ const GenresPage = () => {
       }, [])
 
   return (
-    <div>
+    <Container>
+
     <h1>Genres</h1>
     <BookFilter books={books} genres={genres} />
-  </div>
+    </Container>
+  
   )
 }
 

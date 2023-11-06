@@ -1,6 +1,7 @@
-// BooksFilter.js
-import React, { useState, useEffect } from 'react';
 
+import React, { useState, useEffect } from 'react';
+import styles from './BookFilter.module.scss'
+import { Link } from "react-router-dom"
 const BookFilter = ({ books, genres }) => {
   const [selectedGenre, setSelectedGenre] = useState('');
   const [filteredBooks, setFilteredBooks] = useState([]);
@@ -17,11 +18,13 @@ const BookFilter = ({ books, genres }) => {
   }, [selectedGenre, books, genres])
 
   
-console.log(books)
+
   return (
-    <div>
+    <div className={styles.pageWrapper}>
      
-      <select onChange={(event) => setSelectedGenre(event.target.value)}>
+     <div className={styles.selectGenres}>
+
+      <select className={styles.selectElement} onChange={(event) => setSelectedGenre(event.target.value)}>
         <option value="">All Genres</option>
         {genres.map((genre) => (
           <option key={genre.id} value={genre.name}>
@@ -29,19 +32,22 @@ console.log(books)
           </option>
         ))}
       </select>
-      <div className="books">
+        </div>
+      <div className={styles.booksWrapper} >
         {filteredBooks.map((book) => (
-          <div key={book.id} className="book">
+          <div key={book.id} className={styles.books}>
+            <Link to={`/books/${book.id}`}>
             <h3>{book.title}</h3>
             {book.photos[0] && <img className='image' src={book.photos[0].url} alt={book.photos[0].title}></img>}
             <p>{book.body}</p>
-            <ul>
+            <ul className={styles.genresList}>
             {genres
                 .filter((genre) => genre.bookId === book.id)
                 .map((genre) => (
                   <li key={genre.id}>{genre.name}</li>
-                ))}
+                  ))}
             </ul>
+            </Link>
           </div>
         ))}
       </div>
