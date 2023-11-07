@@ -7,11 +7,10 @@ const AuthorItem = ({data}) => {
     const booksWritten = books.length
 
   return (
-    <div>
-
-    <li className='author-item'><Link className='link' to={`/authors/${id}`}>{name}</Link></li>
-    <span>Books Written : {booksWritten}</span>
-    </div>
+   
+    <li className='author-item'><Link className='link' to={`/authors/${id}`}>{name}</Link><span>Books Written : {booksWritten}</span></li>
+    
+    
   )
 }
 

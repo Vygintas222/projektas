@@ -29,65 +29,23 @@
       "id": 3,
       "title": "Against the Gods 3",
       "body": "Hunted for possessing a heaven-defying object, Yun Che is a young man in both that life and the next. Throwing himself off a cliff to spite his pursuers, Yun Che is reincarnated as Xiao Che, a recently poisoned teen in another realm. Just as hated in this life as the previous one, Che must overcome his own hostile clan, his own inability to cultivate, and his own frosty fiancée."
-    },
-    {
-      "authorId": 4,
-      "title": "Star Odyssey",
-      "body": "A blade and a corpse on the ground. When humans first stepped foot on Neptune in the year 2200, they unlocked a vast and boundless universe ruled by different families, filled with magnificent battle techniques and ten arbiters who controlled it all!",
-      "id": 4
-    },
-    {
-      "authorId": 2,
-      "title": "Testas",
-      "body": "Testas",
-      "id": 5
-    },
-    {
-      "authorId": 1,
-      "title": "asdasd",
-      "body": "asdasdasda",
-      "id": 6
     }
   ],
   "volumes": [
     {
-      "title": "The Peak Of Life!!!",
-      "id": 5
+      "bookId": 2,
+      "title": "The Peak of Life",
+      "id": 26
     },
     {
-      "title": "The Strongest Deva",
-      "id": 6
+      "bookId": 3,
+      "title": "Red Colored Calamity",
+      "id": 27
     },
     {
-      "title": "Journey to the stars 22",
-      "id": 14
-    },
-    {
-      "bookId": 4,
-      "title": "Flipping the Sky",
-      "id": 15
-    },
-    {
-      "title": "asdasdasd",
-      "id": 16
-    },
-    {
-      "bookId": 5,
-      "title": "asdasd",
-      "id": 18
-    },
-    {
-      "bookId": 5,
-      "title": "asdasd",
-      "id": 19
-    },
-    {
-      "title": "454545hjnjh",
-      "id": 21
-    },
-    {
-      "title": "sdasdasdasasd",
-      "id": 25
+      "bookId": 3,
+      "title": "Blue Wind Conspiracy",
+      "id": 28
     }
   ],
   "photos": [
@@ -98,36 +56,13 @@
       "title": "Against The Gods cover"
     },
     {
-      "bookId": 4,
-      "url": "https://cdn.wuxiaworld.com/images/covers/so.jpg",
-      "title": "Star Odyssey cover",
-      "id": 5
-    },
-    {
       "bookId": 2,
       "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg",
       "title": "City of Sin Cover",
       "id": 6
-    },
-    {
-      "bookId": 5,
-      "url": "https://cdn.wuxiaworld.com/images/covers/so.jpg",
-      "title": "testing",
-      "id": 9
-    },
-    {
-      "bookId": 6,
-      "url": "data:image/jpeg;base64,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",
-      "title": "adasd",
-      "id": 10
     }
   ],
   "genres": [
-    {
-      "bookId": 4,
-      "id": 5,
-      "name": "Political"
-    },
     {
       "bookId": 3,
       "name": "Action",
@@ -135,13 +70,8 @@
     },
     {
       "bookId": 2,
-      "name": "adasdasdas",
-      "id": 20
-    },
-    {
-      "bookId": 5,
-      "name": "Action",
-      "id": 25
+      "name": "Mystery",
+      "id": 8
     }
   ]
 }

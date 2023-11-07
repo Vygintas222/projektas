@@ -1,7 +1,8 @@
 .author-item{
     list-style: none;
-   
-    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .link{
     text-decoration: none;
@@ -11,8 +12,6 @@
 }
 .link:hover{
     color: blueviolet;
-    border-style: solid;
-    border-color: blueviolet;
-    padding: 2px;
+    display: inline-block;
     border-radius: 5px;
 }
