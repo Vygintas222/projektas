@@ -75,11 +75,13 @@ const addNewVolumeHandler = async ()=>{
   return (
     <Container>
 
-    <div>
-        <Link to={`/volumes`}>Back</Link>
+    <div className={styles.formWrapper}>
+        <Link className={styles.linkDesign} to={`/volumes`}>Back</Link>
        <h2>{book.title}</h2>
-       <div className={`${styles.formControl} ${titleError && styles.invalid} `}>
 
+
+       
+       <div className={`${styles.formControl} ${titleError && styles.invalid} `}>
         <label htmlFor='volume-name'>Add Volume</label>
         <input 
         type='text' 
@@ -90,10 +92,10 @@ const addNewVolumeHandler = async ()=>{
         placeholder='volume title'
         > 
         </input>
-        {titleError && <span>{titleError}</span>}
-        <button onClick={addNewVolumeHandler}>add</button>
+        {titleError && <span className={styles.spanInvalid}>{titleError}</span>}
+        <button className={styles.buttonDesign} onClick={addNewVolumeHandler}>add</button>
         </div>
-    <ul>
+    <ul className={styles.volumeList}>
 
         {volumes && volumes.map(volume =>(
             <li key={volume.id}>{volume.title}</li>

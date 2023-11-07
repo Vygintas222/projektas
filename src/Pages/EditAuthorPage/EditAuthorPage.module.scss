@@ -1,0 +1,41 @@
+.fieldset{
+    width: 260px; 
+    border-style: solid;
+    border-width: 4px;
+    .formControl{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input{
+            background-color: rgb(235, 219, 243);
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        input:focus{
+            background-color: rgb(254, 225, 255);
+          
+        }
+    }
+    .formControl.invalid input{
+        background-color: rgb(250, 189, 189);
+        color: rgb(0, 0, 0);
+        border-style: solid;
+        border-color: red;
+      
+    }
+    .spanInvalid{
+        color: red;
+      }
+      .buttonDesign{
+        border: none;
+        width: 50px;
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 1px 2px 3px black;
+      }
+      .buttonDesign:hover{
+        transform: translateY(-1px);
+      }
+}
+

@@ -2,13 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { API_URL } from '../../config'
 import { toast } from 'react-toastify'
-
+import styles from './EditAuthorPage.module.scss'
 const EditAuthorPage = () => {
     const {id} = useParams()
     const navigate = useNavigate()
   
     const [name, setName]= useState('')
 
+    const [nameError, setNameError]= useState('')
+
+    const [formIsInvalid,setFormIsInvalid]= useState(false)
     useEffect(()=>{
 
         const fetchData =async()=>{
@@ -26,6 +29,27 @@ const EditAuthorPage = () => {
     const editedAuthorHandler = (event)=>{
         event.preventDefault()
 
+
+
+
+let formIsValid = true
+
+      if(!name){
+        setNameError('Invalid author name')
+        formIsValid = false
+      }else if (name.length < 5){
+        setNameError('Name must be atleast 5 letters long')
+        formIsValid= false
+      }
+      if(!formIsValid){
+        setFormIsInvalid(true)
+        return
+      }
+
+
+
+
+
         const editedAuthor = {
             id:id,
             name
@@ -41,16 +65,20 @@ const EditAuthorPage = () => {
             .then(res => res.json())
             .then(data => {
             
+              if(formIsInvalid){
+
+                navigate('/authors/')
+                toast.success('Author Edited')
+              }
             })
-            navigate('/authors/' + id)
-            toast.success('Author Edited')
+           
     }
 
   return (
-    <fieldset>
+    <fieldset className={styles.fieldset}>
         <legend>Edit author</legend>
         <form onSubmit={editedAuthorHandler}>
-            <div className='form-control'>
+            <div  className={`${styles.formControl} ${nameError && styles.invalid} `}>
                 <label htmlFor='name'>Name</label>
                 <input 
                 type='text' 
@@ -59,7 +87,8 @@ const EditAuthorPage = () => {
                 onChange={nameHandler}
                 >
                 </input>
-                <button type='submit'>Edit</button>
+                {nameError && <span className={styles.spanInvalid}>{nameError}</span>}
+                <button className={styles.buttonDesign} type='submit'>Edit</button>
             </div>
 
 
