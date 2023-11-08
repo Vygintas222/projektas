@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { API_URL } from '../../config'
 import axios from 'axios'
 import { toast } from 'react-toastify'
@@ -51,6 +51,7 @@ const addGenreHandler = async ()=>{
 
   return (
     <div>
+        <Link to={`/authors/${book.authorId}`}>back</Link>
         <h2>{book.title}</h2>
         <ul>
         {book.genres &&
