@@ -3,8 +3,9 @@ import { API_URL } from '../../config'
 import AuthorsList from '../../Components/AuthorList/AuthorsList'
 import Container from '../../Components/Container/Container'
 import axios from 'axios'
-import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import styles from './AuthorsPage.module.scss'
+
 const AuthorsPage = () => {
     
     const [authors , setAuthors] = useState([])
@@ -46,7 +47,7 @@ const newAuthorHandler = async event=>{
 <fieldset>
 <legend>Add new Author</legend>
     <form onSubmit={newAuthorHandler}>
-      <div className='form-control'> 
+      <div className={styles.formControl}> 
         <label htmlFor='name'>Author name</label>
         <input 
         typeof='text' 

@@ -11,10 +11,6 @@
     {
       "id": 3,
       "name": "Mars Gravity"
-    },
-    {
-      "name": "Along With The Wind",
-      "id": 4
     }
   ],
   "books": [
@@ -29,6 +25,12 @@
       "id": 3,
       "title": "Against the Gods 3",
       "body": "Hunted for possessing a heaven-defying object, Yun Che is a young man in both that life and the next. Throwing himself off a cliff to spite his pursuers, Yun Che is reincarnated as Xiao Che, a recently poisoned teen in another realm. Just as hated in this life as the previous one, Che must overcome his own hostile clan, his own inability to cultivate, and his own frosty fiancée."
+    },
+    {
+      "authorId": 1,
+      "title": "A Will Eternal",
+      "body": "One will to create oceans. One will to summon the mulberry fields.\n\nOne will to slaughter countless devils. One will to eradicate innumerable immortals.\n\nOnly my will… is eternal.",
+      "id": 4
     }
   ],
   "volumes": [
@@ -46,6 +48,14 @@
       "bookId": 3,
       "title": "Blue Wind Conspiracy",
       "id": 28
+    },
+    {
+      "title": "Glossary and Art Gallery",
+      "id": 29
+    },
+    {
+      "title": "I'm Bai Xiaochun ",
+      "id": 30
     }
   ],
   "photos": [
@@ -60,6 +70,12 @@
       "url": "https://static.wikia.nocookie.net/city-of-sin/images/f/f1/117302-1381846762000.jpg",
       "title": "City of Sin Cover",
       "id": 6
+    },
+    {
+      "bookId": 4,
+      "url": "https://static.wikia.nocookie.net/a-will-eternal/images/7/74/Eng_Cover_1.jpg/",
+      "title": "cover",
+      "id": 7
     }
   ],
   "genres": [
@@ -72,6 +88,11 @@
       "bookId": 2,
       "name": "Mystery",
       "id": 8
+    },
+    {
+      "bookId": 4,
+      "name": "Comedy",
+      "id": 9
     }
   ]
 }

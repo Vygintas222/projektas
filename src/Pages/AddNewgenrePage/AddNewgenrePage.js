@@ -65,7 +65,7 @@ const addGenreHandler = async ()=>{
           value={newGenreName}
           onChange={newGenreNameHandler}
           placeholder="Enter a new genre name"
-          maxLength={10}
+          maxLength={16}
         />
         <button onClick={addGenreHandler}>Add Genre</button>
       </div>
